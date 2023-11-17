@@ -1,13 +1,29 @@
-const $lunchRoom = document.getElementById('lunchRoom')
-const $lunchRoomLink = document.getElementById('lunchRoomLink')
-const $weatherReport = document.getElementById('weatherReport')
-const $weatherReportLink = document.getElementById('weatherReportLink')
-const $story = document.getElementById('story')
+// Variables to store HTML elements
+const $weatherReportLink = document.getElementById('weatherReportLink');
+const $lunchRoomLink = document.getElementById('lunchRoomLink');
+const $weatherReport = document.getElementById('weatherReport');
+const $lunchRoom = document.getElementById('lunchRoom');
+const $story = document.getElementById('story');
 
-const $lrContainer = document.getElementById('lrContainer')
-const $lrNoun = document.getElementById('lrNoun')
-const $lrAdjective1 = document.getElementById('lrAdjective1')
-const $lrAdjective2 = document.getElementById('lrAdjective2')
-const $lrVegetable1 = document.getElementById('lrVegetable1')
-const $lrVegetable2 = document.getElementById('lrVegetable2')
-const $lrAnimal = document.getElementById('lrAnimal')
+// Event listener for Weather Report link
+$weatherReportLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    
+    // Update visibility and active classes
+    $weatherReport.classList.remove('d-none');
+    $lunchRoom.classList.add('d-none');
+    $story.classList.add('d-none');
+    $weatherReportLink.classList.add('active');
+    $lunchRoomLink.classList.remove('active');
+});
+
+// Event listener for Lunch Room link
+$lunchRoomLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    
+    // Update visibility and active classes
+    $lunchRoom.classList.remove('d-none');
+    $weatherReport.classList.add('d-none');
+    $story.classList.add('d-none');
+    $lunchRoomLink.classList.add('active');
+    $weatherReportLink.classList.remove('
